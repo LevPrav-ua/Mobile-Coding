@@ -5,6 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_coding.R
 import com.example.mobile_coding.model.Animal
+import com.example.mobile_coding.model.Cat
+import com.example.mobile_coding.model.Dog
+import com.example.mobile_coding.model.Parrot
 
 class AnimalsAdapter
 constructor(
@@ -31,6 +34,8 @@ constructor(
     override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: AnimalViewHolder, position: Int) {
-        holder.setInfo(items[position].getInfo())
+        val item = items[position]
+        holder.setInfo(item.getInfo())
+        holder.setBackgroundColor(item)
     }
 }
