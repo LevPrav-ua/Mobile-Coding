@@ -1,5 +1,6 @@
 package com.example.mobile_coding.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +26,13 @@ class AnimalsActivity : AppCompatActivity() {
     }
 
     private fun itemClick(animal: Animal) {
-        // TODO implement item click handle
+        val intent = Intent(this, AnimalDetailsActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, animal.getInfo())
+        }
+        startActivity(intent)
+    }
+
+    companion object {
+        const val EXTRA_MESSAGE: String = "EXTRA_MESSAGE"
     }
 }

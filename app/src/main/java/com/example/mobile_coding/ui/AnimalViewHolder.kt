@@ -3,6 +3,7 @@ package com.example.mobile_coding.ui
 import android.graphics.Color
 import android.view.View
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_coding.R
 import com.example.mobile_coding.model.Animal
@@ -21,7 +22,7 @@ constructor(
     }
 
     fun setBackgroundColor(animal: Animal) {
-        val infoContainer = view.findViewById<TextView>(R.id.infoContainer)
+        val infoContainer = view.findViewById<ConstraintLayout>(R.id.infoContainer)
 
         val color = when(animal) {
             is Cat -> Color.GREEN
