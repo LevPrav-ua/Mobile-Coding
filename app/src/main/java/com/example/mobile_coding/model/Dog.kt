@@ -12,4 +12,17 @@ constructor(
     override fun getInfo(): String {
         return "Custom info about ME ${communicate()}, ${super.getInfo()}"
     }
+    fun setDog(num: Int){
+            when(num) {
+                1 -> {
+                    breed = "Labrador"; color = "White"
+                }
+                2 -> {
+                    breed = "Bulldog"; color = "Brown"
+                }
+                else -> {
+                    breed = "Sheepdog"; color = "Orange and Black"
+                }
+            }
+    }
 }
