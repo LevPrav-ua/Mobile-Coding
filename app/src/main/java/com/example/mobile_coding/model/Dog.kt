@@ -3,8 +3,10 @@ package com.example.mobile_coding.model
 class Dog
 constructor(
     name : String,
-    age : Int
-) : Animal(name, age) {
+    age : Int,
+    breed: String,
+    color: String
+) : Animal(name, age, breed, color) {
     override fun communicate(): String {
         return "GAV"
     }
